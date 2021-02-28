@@ -8,6 +8,7 @@ import { CustomTableComponent } from './custom-table/custom-table.component';
 import { IconCellComponent } from './custom-table/icon-cell/icon-cell.component';
 import { FormsModule } from '@angular/forms';
 import { NameDateCellComponent } from './custom-table/name-date-cell/name-date-cell.component';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -18,9 +19,9 @@ import { NameDateCellComponent } from './custom-table/name-date-cell/name-date-c
   ],
   imports: [
     BrowserModule,
+    CommonModule,
     FormsModule,
-    HttpClientModule,
-
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Row, iMockData, iCourse } from '../shared/data.model';
+import { Row, iMockData } from '../shared/data.model';
 import { DataService } from '../shared/data.service';
 
 @Component({
