@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Row, iMockData } from '../shared/data.model';
-import { DataService } from '../shared/data.service';
+import { Row, iMockData } from 'src/app/shared/data.model';
+import { DataService } from 'src/app/shared/data.service';
 
 @Component({
   selector: 'app-custom-table',
