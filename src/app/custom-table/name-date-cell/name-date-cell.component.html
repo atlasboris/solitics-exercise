@@ -1,0 +1,16 @@
+<div class="name-and-date">
+    <p *ngIf="!nameDate.editable">
+        {{nameDate.name}}
+    </p>
+    <input
+        type="text"
+        [(ngModel)]="nameDate.name"
+        *ngIf="nameDate.editable"
+        [id]="nameDate.name">
+    <div>
+        <span>
+            {{nameDate.date}}
+        </span>
+        <img src="assets/img/edit.svg" (click)="editName()">
+    </div>
+</div>

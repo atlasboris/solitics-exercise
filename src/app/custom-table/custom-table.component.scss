@@ -1,0 +1,40 @@
+table {
+    border-collapse: collapse;
+    text-align: center;
+    color:#666;
+    tr {
+      border-bottom: 1px solid #bbb;
+    }
+    tr:nth-child(1) {
+      border-top: 1px solid #bbb;
+      border-bottom: 3px solid rgb(120, 165, 94);
+    }
+  
+    td {
+      text-align: center;
+      padding: 8px 25px;
+
+      span{
+        font-weight: bold;
+      }
+      span.new-today{
+        color:rgb(89, 89, 247);    
+      }
+      span.active{
+  
+        color:rgb(120, 165, 94);
+      }
+      span.removed{
+        color:rgb(241, 95, 76);
+      }
+    }
+  
+    img {
+      height: 25px;
+    }
+  
+    .long-td {
+      text-align: right;
+    }
+  }
+  

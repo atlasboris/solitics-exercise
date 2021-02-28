@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "solitics-exercise"
+    }
+  },
+  "defaultProject": "solitics-exercise",
+  "cli": {
+    "analytics": false
+  }
 }

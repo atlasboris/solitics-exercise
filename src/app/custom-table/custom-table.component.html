@@ -1,0 +1,66 @@
+<table class="rtl">
+    <tr *ngFor="let row of rows">
+        <ng-container *ngIf="row['total']!==0">
+            <td *ngFor="let column of columns">
+                <div [ngSwitch]="column">
+                    <div *ngSwitchCase="'name_and_date'">
+                        <app-name-date-cell [nameDate]="row['name_and_date']"></app-name-date-cell>
+                    </div>
+                    <ng-container *ngIf="row[column]">
+                        <div *ngSwitchCase="'status_icon'">
+                            <app-icon-cell [statusIcon]="row['status_icon']" [statusLabel]="'ראשית'"></app-icon-cell>
+                        </div>
+                    </ng-container>
+                    <div *ngSwitchCase="'new_today'">
+                        <span class="new-today">
+                            {{row[column]}}
+                        </span>
+                        <p>נוספו היום</p>
+                    </div>
+                    <div *ngSwitchCase="'active'">
+                        <span class="active">
+                            {{row[column]}}
+                        </span>
+                        <p>פעילים</p>
+                    </div>
+                    <div *ngSwitchCase="'removed'">
+                        <span class="removed">
+                            {{row[column]}}
+                        </span>
+                        <p>הוסרו</p>
+                    </div>
+                    <div *ngSwitchCase="'blocked'">
+                        <span>
+                            {{row[column]}}
+                        </span>
+                        <p>חסומים</p>
+                    </div>
+                    <div *ngSwitchCase="'stopped'">
+                        <span>
+                            {{row[column]}}
+                        </span>
+                        <p>הופסקו</p>
+                    </div>
+                    <div *ngSwitchCase="'total'">
+                        <span>
+                            {{row[column]}}
+                        </span>
+                        <p>סה"כ</p>
+                    </div>
+                    <div *ngSwitchDefault>{{row[column]}}</div>
+                </div>
+            </td>
+        </ng-container>
+        <ng-container *ngIf="row['total']===0">
+            <td>
+                <app-name-date-cell [nameDate]="row['name_and_date']"></app-name-date-cell>
+            </td>
+            <td>
+                <app-icon-cell [statusIcon]="row['status_icon']" [statusLabel]="'ריקה'"></app-icon-cell>
+            </td>
+            <td class="long-td" colSpan="6">
+                אין עדיין נרשמים . להוספת נרשמים לחץ על "ייבוא" או עיין בתפרית
+            </td>
+        </ng-container>
+    </tr>
+</table>

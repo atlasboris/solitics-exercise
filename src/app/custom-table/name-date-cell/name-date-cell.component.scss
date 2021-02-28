@@ -1,0 +1,21 @@
+.name-and-date {
+    text-align: right;
+    p{
+      font-size: 19px;
+      font-weight: bold;
+      white-space: nowrap;
+      direction: rtl;
+      color:#0df;
+    }
+
+    div{
+      direction: ltr;
+
+      img {
+        height: 15px;
+        width: 15px;
+        margin-left: 30px;
+        cursor: pointer;
+      }
+    }
+  }
